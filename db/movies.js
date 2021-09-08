@@ -1,6 +1,6 @@
 const movies = [
 {
-  text: 'Movie'
+  text: 'Movie',
   isWatched: false
 }
 ]

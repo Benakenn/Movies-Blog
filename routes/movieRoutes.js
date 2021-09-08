@@ -22,4 +22,8 @@ router.put('/movies/:text', (req, res) => {
 
 router.delete('/items/:text', (req, res) => {
   const text = req.params.text
+  movies = movies.filter(item => movie.text !== text)
+  res.sendStatus(200)
 })
+
+module.exports = router 

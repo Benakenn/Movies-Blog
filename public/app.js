@@ -22,7 +22,7 @@ document.getElementById('addMovie').addEventListener('click', event => {
 
    document.getElementById('text').value = ''
   })
-  .catch(err console.log(err))
+  .catch(err => console.log(err))
 })
 
 document.addEventListener('click', event => {

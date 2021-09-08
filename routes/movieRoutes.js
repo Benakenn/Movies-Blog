@@ -20,9 +20,9 @@ router.put('/movies/:text', (req, res) => {
   res.sendStatus(200)
 })
 
-router.delete('/items/:text', (req, res) => {
+router.delete('/movies/:text', (req, res) => {
   const text = req.params.text
-  movies = movies.filter(item => movie.text !== text)
+  movies = movies.filter(movie => movie.text !== text)
   res.sendStatus(200)
 })
 

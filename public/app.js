@@ -13,8 +13,8 @@ document.getElementById('addMovie').addEventListener('click', event => {
    const movieElem = document.createElement('div')
    movieElem.innerHTML = `
    <p>${movie.text}</p>
-   <button class="isWatched" data-text="${movie.text}">${movie.isWatched ? 'Watched' : 'Not Watched'}</button>
-   <button class="delete" data-text="${movie.text}">Delete</button>
+   <button class="isWatched" data-text="${movie.text}" style="background-color: lightcoral; border: none; border-radius: 5px; color: white; height: 45px; width: 150px;">${movie.isWatched ? 'Watched' : 'Not Watched'}</button>
+   <button class="delete" data-text="${movie.text}" style="background-color: darkgrey; border: none; border-radius: 5px; color: black; height: 45px; width: 150px;">Delete</button>
    <hr>
    `
 
@@ -56,8 +56,8 @@ axios.get('/api/movies')
    const movieElem = document.createElement('div')
    movieElem.innerHTML = `
         <p>${movie.text}</p>
-        <button class="isWatched" data-text="${movie.text}">${movie.isWatched ? 'Watched' : 'Not Watched'}</button>
-        <button class="delete" data-text="${movie.text}">Delete</button>
+        <button class="isWatched" data-text="${movie.text}" style="background-color: lightcoral; border: none; border-radius: 5px; color: white; height: 45px; width: 150px;">${movie.isWatched ? 'Watched' : 'Not Watched'}</button>
+        <button class="delete" data-text="${movie.text}" style="background-color: darkgrey; border: none; border-radius: 5px; color: black; height: 45px; width: 150px;">Delete</button>
         <hr>
       `
    document.getElementById('movies').append(movieElem)

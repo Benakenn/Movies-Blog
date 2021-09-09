@@ -1,11 +1,11 @@
 const router = require('express').Router()
-const { movies } = require('../db')
+let { movies } = require('../db')
 
 router.get('/movies', (req, res) => {
   res.json(movies)
 })
 
-router.post('/movies', (res, req) => {
+router.post('/movies', (req, res) => {
   movies.push(req.body)
   res.sendStatus(200)
 })
@@ -14,7 +14,7 @@ router.put('/movies/:text', (req, res) => {
   const text = req.params.text
   movies.forEach(movie => {
     if (movie.text === text) {
-      item.isWatched = !item.isWatched
+      movie.isWatched = !movie.isWatched
     }
   })
   res.sendStatus(200)
@@ -26,4 +26,4 @@ router.delete('/movies/:text', (req, res) => {
   res.sendStatus(200)
 })
 
-module.exports = router 
+module.exports = router
